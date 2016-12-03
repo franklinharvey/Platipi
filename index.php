@@ -23,7 +23,7 @@ if (isset($_SESSION["userid"])) {
 <body>
 
 <div class="container">
-	<img src="/graphics/platipi.png" class="logo img-responsive">
+	<img src="graphics/platipi.png" class="logo img-responsive">
 	<h1>Welcome to Platipi.</h1>
 	<h2>Ready to make some <mark>friends?</mark></h2>
 	<div class="row">
