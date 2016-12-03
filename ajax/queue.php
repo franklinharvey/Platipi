@@ -41,7 +41,8 @@
   		});
 	}
 	$(document).ready(function(){
-		$.post("queue.php","{'action': 'start'}", function(response){});
+		$.ajax("queue.php","{'action': 'start'}", function(response){});
+		$.ajax("find_match.php","",function(response){});
 		worker()
 	});	
 </script>
