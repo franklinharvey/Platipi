@@ -1,5 +1,5 @@
 <?php
-    $userid = $_POST['userid']; 
+    $userid = $_SESSION['userid']; 
     $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
     mysqli_select_db($con, "platipi") or die(mysqli_error($con));
 
