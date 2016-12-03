@@ -25,8 +25,16 @@
 
 <script>
 	document.getElementById("btnLeave").onclick = function(){
-		location.href = "static/profile.html";
+		$.ajax("queue.php", "{'action': 'stop'}", function(response) {
+			location.href = "static/profile.html";
+		});
 	}
+	$(document).ready(function() {
+		$.ajax("get_user_link.php","",function(response) {
+			document.getElementByID("btnLink").onclick = function() {
+				location.href=response;
+			});
+	});
 </script>
 
 </body>
