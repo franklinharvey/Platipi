@@ -1,5 +1,16 @@
 <?php
 
+if (isset($_POST['action'])) {
+    switch ($_POST['action']) {
+        case 'start':
+            start_queue($_POST['userid']);
+            break;
+        case 'stop':
+            stop_queue($_POST['userid']);
+            break;
+    }
+}
+
 function start_queue($userid) {
     $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
     mysqli_select_db($con, "platipi") or die(mysqli_error($con));
