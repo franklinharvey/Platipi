@@ -27,7 +27,7 @@ if (isset($_SESSION["userid"])) {
 	<h1>Welcome to Platipi.</h1>
 	<h2>Ready to make some <mark>friends?</mark></h2>
 	<div class="row">
-		<form action="index.php" id="login" method="post" class="form-horizontal">
+		<form action="index.php" id="login-form" method="post" class="form-horizontal">
 			<div class="brand form-group" id="login">
 				<input class="form-control col-sm-12" type="email" name="email" id="txtEmail" placeholder="Email">
 				<input class="form-control col-sm-12" type="password" name="password" id="txtPassword" placeholder="Password">

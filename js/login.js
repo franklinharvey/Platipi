@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#login").submit(function(e) {
+	$("#login-form").submit(function(e) {
 		var url = "http://localhost/ajax/accounts/login.php";
 		
 		if ($("#error").text() != "")
