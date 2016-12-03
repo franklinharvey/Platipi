@@ -1,6 +1,4 @@
 <?php
-function findmatch() {
-
 $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
 mysqli_select_db($con, "platipi") or die(mysqli_error($con));
 
@@ -43,6 +41,5 @@ while ($row = mysqli_fetch_array($qusers)) {
     die($message);
   }
   $i++;
-}
 }
 ?>
