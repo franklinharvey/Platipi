@@ -3,10 +3,10 @@
 if (isset($_POST['action'])) {
     switch ($_POST['action']) {
         case 'start':
-            start_queue($_POST['userid']);
+            start_queue($_SESSION['userid']);
             break;
         case 'stop':
-            stop_queue($_POST['userid']);
+            stop_queue($_SESSION['userid']);
             break;
     }
 }
