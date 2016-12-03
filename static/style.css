@@ -52,10 +52,15 @@ ul {
 	color: #FFF; background-color: #2E3192;
 }
 
+.btnEdit {
+	color: #662D91; background-color: white;
+	width: 90%;
+}
+
 .btn {
 	margin: 8px;
 }
-
+ 
 .btn:hover {
 	color: #D3D3D3;
 }
