@@ -9,10 +9,6 @@ body {
     padding: 16px;
 }
 
-div {
-    height:100vh; 
-}
-
 h1 {
 	color: white;
 }
@@ -55,6 +51,10 @@ ul {
 .btnEdit {
 	color: #662D91; background-color: white;
 	width: 90%;
+}
+
+.btnStop {
+	color: #662D91; background-color: white; width: 90%;
 }
 
 .btn {
