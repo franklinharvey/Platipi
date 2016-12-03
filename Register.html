@@ -19,13 +19,19 @@
 			<div class="brand form-group" id="Registration">
 				<input class="form-control col-sm-12" type="email" id="txtEmail" placeholder="Email">
 				<input class="form-control col-sm-12" type="password" id="txtPassword" placeholder="Password">
-				<input class="form-control col-sm-12" type="confirmPassword" id="txtConfirm" placeholder= "Confirm Password">
+				<input class="form-control col-sm-12" type="password" id="txtConfirm" placeholder= "Confirm Password">
 				<button id="btnReg" class="btn btnReg">Register</button>
 				
 			</div>
 		</form>
 	</div>
 </div>
+
+<script>
+	document.getElementById("btnReg").onclick = function(){
+		location.href = "static/profile.html";
+	}
+</script>
 
 </body>
 </html>
