@@ -33,6 +33,13 @@ function stop_queue($userid) {
         $message  = 'Invalid query 1: ' . mysqli_error($con) . "\n";
         die($message);
     }
+    
+    $qq2 = mysqli_query($con, "UPDATE users SET users.group_link=\"NULL\" WHERE users.userid=".$userid);
+
+    if (!$qq2) {
+        $message  = 'Invalid query 1: ' . mysqli_error($con) . "\n";
+        die($message);
+    }
 }
 
 ?>
