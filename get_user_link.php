@@ -1,6 +1,5 @@
 <?php
-
-function get_user_link($userid) {
+    $userid = $_POST['userid']; 
     $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
     mysqli_select_db($con, "platipi") or die(mysqli_error($con));
 
@@ -12,7 +11,5 @@ function get_user_link($userid) {
     }
     $qq_row = mysqli_fetch_array($qq);
 
-    return $qq[0]
-}
-
+    echo $qq[0]
 ?>
