@@ -40,6 +40,10 @@ ul {
 	color: #662D91;
 }
 
+.logo {
+	height: 100px;
+}
+
 .btnSignUp {
 	color: #FFF; background-color: #662D91;
 }
