@@ -52,6 +52,14 @@ ul {
 	color: #FFF; background-color: #2E3192;
 }
 
+.btnLink {
+	color: #FFF; background-color: #2E3192;
+}
+
+.btnLeave {
+	color: #FFF; background-color: #662D91;
+}
+
 .btnEdit {
 	color: #662D91; background-color: white;
 	width: 90%;
