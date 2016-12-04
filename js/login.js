@@ -4,7 +4,7 @@ $(document).ready(function() {
 	});
 	
 	$("#login-form").submit(function(e) {
-		var url = "http://localhost/ajax/accounts/login.php";
+		var url = "ajax/accounts/login.php";
 		
 		if ($("#error").text() != "")
 			$("#error").text("...");

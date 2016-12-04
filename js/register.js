@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#register-form").submit(function(e) {
-		var url = "http://localhost/ajax/accounts/register.php";
+		var url = "ajax/accounts/register.php";
 		
 		if ($("#error").text() != "")
 			$("#error").text("...");
