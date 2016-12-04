@@ -54,6 +54,8 @@ if (!$result) {
     <div class="col-sm-6">
       <p><?php echo strlen($row[1]) != 0 ? $row[1] : "No user bio. You should totally add a bio here because it would look really cool."; ?></p>
       <a href="edit_profile.php"><button id="addInterest" class="btn btnEdit">Edit Profile</button></a>
+      <button id="addInterest" class="btn btnEdit">Edit Profile</button>
+      <a href="waiting.php"><button id="addInterest" class="btn btnEdit">Find Some Friends</button></a>
     </div>
   <ul class="list-group col-sm-6">
 <?php
@@ -68,6 +70,10 @@ if (mysqli_num_rows($result) == 0) {
   </ul>
   </div>
 </div>
-
+<script>
+$(document).ready(function(){
+		$.post("queue.php","{'action': 'stop'}", function(response){});
+	});	
+</script>
 </body>
 </html>

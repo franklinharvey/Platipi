@@ -74,7 +74,7 @@ for ($i = 0; $i < sizeof($user_interests_weird); $i++) {
 for ($i = 0; $i < sizeof($all_interests); $i++) {
 	$checked =  in_array($all_interests[$i], $user_interests_normal);
 	
-	echo "<div class='checkbox'><label><input type='checkbox' value='".
+	echo "<div class='checkbox-inline'><label><input type='checkbox' value='".
 		$all_interests[$i]."' ".($checked ? "checked" : "").">".$all_interests[$i]."</label></div>";
 }
 
