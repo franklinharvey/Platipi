@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 if (isset($_SESSION["userid"])) {
-	header("Location: http://localhost/profile.php");
+	header("Location: http://platipi.com/profile.php");
 	exit();
 }
 
@@ -31,11 +33,28 @@ if (isset($_SESSION["userid"])) {
 				<input class="form-control col-sm-12" type="email" name="email" id="txtEmail" placeholder="Email">
 				<input class="form-control col-sm-12" type="password" name="password" id="txtPassword" placeholder="Password">
 				<p class="error" id="error"></p>
+				
+				
+				<div class="row omb_row-sm-offset-3">
+					<div class="col-xs-12 col-sm-3">
+						<label class="checkbox" style= "padding-left: 30px; color: black">
+							<input type="checkbox" value="remember-me">Remember Me
+						</label>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						
+							<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
+					
+					</div>
+				</div>
+				
 				<button id="btnLogin" class="btn btnLogin">Log in</button>
 				<button id="btnSignUp" class="btn btnSignUp">Sign Up</button>
-			</div>
+			
+		</div>
 		</form>
 	</div>
+			
 </div>
 
 </body>
