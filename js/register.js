@@ -1,19 +1,15 @@
 $(document).ready(function() {
-	$("#btnSignUp").click(function() {
-		window.location.href = "register.php";
-	});
-	
-	$("#login-form").submit(function(e) {
-		var url = "http://localhost/ajax/accounts/login.php";
+	$("#register-form").submit(function(e) {
+		var url = "http://localhost/ajax/accounts/register.php";
 		
 		if ($("#error").text() != "")
 			$("#error").text("...");
 		$.ajax({
 			type: "POST",
 			url: url,
-			data: $("#login-form").serialize(),
+			data: $("#register-form").serialize(),
 			success: function(data) {
-				if (data == "Login successful.") {
+				if (data == "Registration successful.") {
 					window.location.href = "../profile.php";
 				}
 				else {
