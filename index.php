@@ -35,8 +35,7 @@ if (isset($_SESSION["userid"])) {
 				<button id="btnSignUp" class="btn btnSignUp">Sign Up</button>
 			</div>
 		</form>
-	</div>
-			<div class="row omb_row-sm-offset-3">
+					<div class="row omb_row-sm-offset-3">
 			<div class="col-xs-12 col-sm-3">
 				<label class="checkbox">
 					<input type="checkbox" value="remember-me">Remember Me
@@ -48,6 +47,8 @@ if (isset($_SESSION["userid"])) {
 				</p>
 			</div>
 		</div>
+	</div>
+
 </div>
 
 </body>
