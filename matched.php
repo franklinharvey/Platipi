@@ -31,7 +31,7 @@
 	}
 	$(document).ready(function() {
 		$.post("get_user_link.php","",function(response) {
-			document.getElementByID("btnLink").onclick = function() {
+			document.getElementById("btnLink").onclick = function() {
 				location.href=response;
 			}});
 	});
