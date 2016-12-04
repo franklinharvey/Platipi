@@ -37,13 +37,13 @@ if (isset($_SESSION["userid"])) {
 				
 				<div class="row omb_row-sm-offset-3">
 					<div class="col-xs-12 col-sm-3">
-						<label class="checkbox" style= "padding-left: 30px; text-color: black">
+						<label class="checkbox" style= "padding-left: 30px; color: black">
 							<input type="checkbox" value="remember-me">Remember Me
 						</label>
 					</div>
 					<div class="col-xs-12 col-sm-3">
 						<p class="omb_forgotPwd">
-							<a href="#">Forgot password?</a>
+							<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
 						</p>
 					</div>
 				</div>
