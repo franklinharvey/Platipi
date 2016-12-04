@@ -54,7 +54,6 @@ if (!$result) {
     <div class="col-sm-6">
       <p><?php echo strlen($row[1]) != 0 ? $row[1] : "No user bio. You should totally add a bio here because it would look really cool."; ?></p>
       <a href="edit_profile.php"><button id="addInterest" class="btn btnEdit">Edit Profile</button></a>
-      <button id="addInterest" class="btn btnEdit">Edit Profile</button>
       <a href="waiting.php"><button id="addInterest" class="btn btnEdit">Find Some Friends</button></a>
       <button id="logOut" class="btn btnLogOut">Log Out</button>
     </div>

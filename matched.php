@@ -18,7 +18,6 @@
 			<div class="brand form-group" id="MatchMade">
 				<button id="btnLink" class="btn btnLink"> Proceed to Chat </button>
 				<button id="btnLeave" class="btn btnLeave">I Hate These Friends!</button>
-				
 			</div>
 	</div>
 </div>
