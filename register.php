@@ -13,16 +13,18 @@
 <body>
 
 <div class="container">
+	<img src="graphics/platipi.png" class="logo img-responsive">
 	<h1>Create an Account</h1>
 	<h2>Get ready to <mark>socialize!</mark></h2>
 	<div class="row">
 		<form id="register-form" class="form-horizontal">
-			<div class="brand form-group" id="Registration">
+			<div class="brand form-group" id="register">
 				<input class="form-control col-sm-12" name="email" type="email" id="txtEmail" placeholder="Email">
 				<input class="form-control col-sm-12" name="first_name" type="text" id="txtName" placeholder="First Name">
 				<input class="form-control col-sm-12" name="password" type="password" id="txtPassword" placeholder="Password">
 				<p class="error" id="error"></p>
 				<button id="btnReg" class="btn btnReg">Register</button>
+				<button class="btn btnReg" id="btnReturn">Return to Login</button>
 			</div>
 		</form>
 	</div>
