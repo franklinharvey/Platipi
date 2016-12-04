@@ -42,9 +42,9 @@ if (isset($_SESSION["userid"])) {
 						</label>
 					</div>
 					<div class="col-xs-12 col-sm-3">
-						<p class="omb_forgotPwd">
+						
 							<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
-						</p>
+					
 					</div>
 				</div>
 				
