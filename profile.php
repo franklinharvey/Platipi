@@ -56,6 +56,7 @@ if (!$result) {
       <a href="edit_profile.php"><button id="addInterest" class="btn btnEdit">Edit Profile</button></a>
       <button id="addInterest" class="btn btnEdit">Edit Profile</button>
       <a href="waiting.php"><button id="addInterest" class="btn btnEdit">Find Some Friends</button></a>
+      <button id="logOut" class="btn btnLogOut">Log Out</button>
     </div>
   <ul class="list-group col-sm-6">
 <?php
@@ -67,12 +68,18 @@ if (mysqli_num_rows($result) == 0) {
 	}
 }
 ?>
+
   </ul>
   </div>
 </div>
 <script>
 $(document).ready(function(){
-		$.post("queue.php","{'action': 'stop'}", function(response){});
+		$.post("queue_stop.php","", function(response){});
+		document.getElementById("logOut").onClick = function(){
+			$.post("queue_stop.php","", function(response){});
+			$.post("LogOut.php","",function(response){location.href = "index.php";
+			});
+		}
 	});	
 </script>
 </body>
