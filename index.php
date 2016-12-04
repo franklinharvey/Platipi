@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 if (isset($_SESSION["userid"])) {
-	header("Location: http://localhost/profile.php");
+	header("Location: http://platipi.com/profile.php");
 	exit();
 }
 
