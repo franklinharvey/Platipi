@@ -17,7 +17,7 @@
   </div>
   <div class="loading">
     <!-- <img src="../graphics/box.gif" class="img-responsive"> -->
-    <button id="btnStop" class="btn btnStop">Stop Looking</button>
+    <a href="profile.php"><button id="btnStop" class="btn btnStop">Stop Looking</button></a>
   </div>
   </div>
   
