@@ -1,8 +1,4 @@
-$(document).ready(function() {
-	$("#btnReturn").click(function() {
-		window.location.href = "index.php";
-	});
-	
+$(document).ready(function() {	
 	$("#register-form").submit(function(e) {
 		var url = "ajax/accounts/register.php";
 		

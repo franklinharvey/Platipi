@@ -24,7 +24,7 @@
 				<input class="form-control col-sm-12" name="password" type="password" id="txtPassword" placeholder="Password">
 				<p class="error" id="error"></p>
 				<button id="btnReg" class="btn btnReg">Register</button>
-				<button class="btn btnReg" id="btnReturn">Return to Login</button>
+				<a href="index.php">Return to Login</a>
 			</div>
 		</form>
 	</div>
