@@ -24,7 +24,7 @@
   <script>
 	document.getElementById("btnStop").onclick = function(){
 		$.post("queue.php","{'action':'stop'}", function(response) {
-			location.href = "profile.html";
+			location.href = "profile.php";
 		});
 	}
 	function worker() {
@@ -32,7 +32,7 @@
     		url: 'get_user_link.php', 
     		success: function(data) {
       			if (data !== 'NULL')
-				location.href = "matched.html";
+				location.href = "matched.php";
     		},
     		complete: function() {
       			// Schedule the next request when the current one's complete

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $userid = $_SESSION['userid']; 
     $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
     mysqli_select_db($con, "platipi") or die(mysqli_error($con));
@@ -11,5 +12,5 @@
     }
     $qq_row = mysqli_fetch_array($qq);
 
-    echo $qq[0]
+    echo $qq_row[0]
 ?>

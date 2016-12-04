@@ -25,15 +25,15 @@
 
 <script>
 	document.getElementById("btnLeave").onclick = function(){
-		$.ajax("queue.php", "{'action': 'stop'}", function(response) {
-			location.href = "static/profile.html";
+		$.post("queue.php", "{'action': 'stop'}", function(response) {
+			location.href = "profile.php";
 		});
 	}
 	$(document).ready(function() {
-		$.ajax("get_user_link.php","",function(response) {
+		$.post("get_user_link.php","",function(response) {
 			document.getElementByID("btnLink").onclick = function() {
 				location.href=response;
-			});
+			}});
 	});
 </script>
 
