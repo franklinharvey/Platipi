@@ -68,6 +68,10 @@ if (mysqli_num_rows($result) == 0) {
   </ul>
   </div>
 </div>
-
+<script>
+$(document).ready(function(){
+		$.post("queue.php","{'action': 'stop'}", function(response){});
+	});	
+</script>
 </body>
 </html>
