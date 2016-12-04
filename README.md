@@ -7,7 +7,7 @@ with your new found clique of godliness.
 
 # People
 
-David Chan
-Kendall Weistroffer
-Jeff Everett
+David Chan,
+Kendall Weistroffer,
+Jeff Everett,
 Franklin Harvey
