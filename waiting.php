@@ -23,14 +23,14 @@
   
   <script>
 	document.getElementById("btnStop").onclick = function(){
-		$.post("queue.php","{'action':'stop'}", function(response) {
+		$.post("queue_stop.php","", function(response) {
 			location.href = "profile.php";
 		});
 	}
 	function worker() {
   		$.ajax({
-		type: "POST"
-    		url: 'get_user_link.php', 
+		type: "POST",
+    		url: "get_user_link.php", 
     		success: function(data) {
       			if (data !== 'NULL')
 				location.href = "matched.php";
@@ -42,7 +42,7 @@
   		});
 	}
 	$(document).ready(function(){
-		$.post("queue.php","{'action': 'start'}", function(response){});
+		$.post("queue_start.php","", function(response){});
 		$.post("find_match.php","",function(response){});
 		worker()
 	});	

@@ -18,6 +18,7 @@ function start_queue($userid) {
         $message  = 'Invalid query 1: ' . mysqli_error($con) . "\n";
         die($message);
     }
+    echo "Started Queueing";
 }
 function stop_queue($userid) {
     $con = mysqli_connect("localhost", "platypus", "password") or die(mysqli_error($con));
@@ -33,5 +34,6 @@ function stop_queue($userid) {
         $message  = 'Invalid query 1: ' . mysqli_error($con) . "\n";
         die($message);
     }
+    echo "Stopped Queueing";
 }
 ?>
