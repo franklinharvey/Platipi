@@ -29,6 +29,7 @@
 	}
 	function worker() {
   		$.ajax({
+		type: "POST"
     		url: 'get_user_link.php', 
     		success: function(data) {
       			if (data !== 'NULL')
@@ -41,8 +42,8 @@
   		});
 	}
 	$(document).ready(function(){
-		$.ajax("queue.php","{'action': 'start'}", function(response){});
-		$.ajax("find_match.php","",function(response){});
+		$.post("queue.php","{'action': 'start'}", function(response){});
+		$.post("find_match.php","",function(response){});
 		worker()
 	});	
 </script>
