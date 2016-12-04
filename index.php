@@ -37,8 +37,8 @@ if (isset($_SESSION["userid"])) {
 				
 				<div class="row omb_row-sm-offset-3">
 					<div class="col-xs-12 col-sm-3">
-						<label class="checkbox">
-							<input type="checkbox" value="remember-me" style= "padding-left: 100px; text-color: black">Remember Me
+						<label class="checkbox" style= "padding-left: 30px; text-color: black">
+							<input type="checkbox" value="remember-me">Remember Me
 						</label>
 					</div>
 					<div class="col-xs-12 col-sm-3">
