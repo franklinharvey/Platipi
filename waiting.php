@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <div class="row">
-    <h1>Finding you a group<span class="blinking-cursor">|</span></h1>
+    <h1>Finding you a group</h1>
     <h2>So you won't have to be <mark>alone!</mark></h2>
   </div>
   <div class="loading">
