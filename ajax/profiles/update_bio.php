@@ -1,10 +1,5 @@
 <?php
 
-$server_name =  "localhost";
-$server_username = "platypus";
-$server_password = "password";
-$db_name = "platipi";
-
 $bio = $_POST["bio"];
 
 if (strlen($bio) > 255) {

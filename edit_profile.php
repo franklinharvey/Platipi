@@ -38,34 +38,52 @@ if (!$result) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Platipi - Profile</title>
+  <title>Platipi - Edit Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async src="js/edit_profile.js"></script>
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
 <div class="container">
   <div class="row">
-  	<h1 id="loginName">Hello, <mark><?php echo $row[0]; ?></mark></h1>
-    <div class="col-sm-6">
-      <p><?php echo strlen($row[1]) != 0 ? $row[1] : "No user bio. You should totally add a bio here because it would look really cool."; ?></p>
-      <a href="edit_profile.php"><button id="addInterest" class="btn btnEdit">Edit Profile</button></a>
-    </div>
-  <ul class="list-group col-sm-6">
+	<form id="profile-form">
+	  <input type="text" id="first_name" name="txtFirstName" value="<?php echo $row[0]; ?>" placeholder="Name" class="form-control">
+		<div>
+		  <div class="form-group">
+			<textarea class="form-control" rows="5" id="bio" placeholder="Biography"><?php echo $row[1]; ?></textarea>
+		  </div>
+		</div>
+		<div>
 <?php
-if (mysqli_num_rows($result) == 0) {
-	echo "<li class='list-group-item'>No interests</li>";
-} else {
-	while ($row = mysqli_fetch_row($result)) {
-		echo "<li class='list-group-item'>".$row[0]."</li>";
-	}
+
+$all_interests = ["Gaming", "Coding", "Hiking", "Playing Music", "Listening to Music", "Skiing",
+	"American Football", "Soccer", "Beer", "Wine", "Coffee",
+	"Tea", "Art", "Dancing", "Comedy", "Books", "Cooking", "Start-ups"];
+	
+$user_interests_weird = mysqli_fetch_all($result, MYSQLI_NUM);
+$user_interests_normal = array();
+for ($i = 0; $i < sizeof($user_interests_weird); $i++) {
+	array_push($user_interests_normal, $user_interests_weird[$i][0]);
 }
+
+for ($i = 0; $i < sizeof($all_interests); $i++) {
+	$checked =  in_array($all_interests[$i], $user_interests_normal);
+	
+	echo "<div class='checkbox'><label><input type='checkbox' value='".
+		$all_interests[$i]."' ".($checked ? "checked" : "").">".$all_interests[$i]."</label></div>";
+}
+
 ?>
-  </ul>
+		</div>
+		
+		<p class="error" id="error"></p>
+		<button id="save" class="btn btnEdit">Save Changes</button>
+	</form>
   </div>
 </div>
 

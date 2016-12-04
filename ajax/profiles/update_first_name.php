@@ -1,10 +1,5 @@
 <?php
 
-$server_name =  "localhost";
-$server_username = "platypus";
-$server_password = "password";
-$db_name = "platipi";
-
 $first_name = $_POST["first_name"];
 
 if (strlen($first_name) > 20) {

@@ -1,3 +1,40 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["userid"])) {
+	die("Must be logged in to view profile.");
+}
+
+$server_name =  "localhost";
+$server_username = "platypus";
+$server_password = "password";
+$db_name = "platipi";
+
+// create connection
+$conn = new mysqli($server_name, $server_username, $server_password, $db_name);
+if (!$conn) {
+	die("Connection failed.");
+}
+
+// get name and bio
+$sql = "SELECT first_name, bio FROM users WHERE userid=".$_SESSION["userid"];
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) == 0) {
+	die("Could not fetch account.");
+}
+
+$row = mysqli_fetch_row($result);
+
+// get interests
+$sql = "SELECT interest FROM interests WHERE userid=".$_SESSION["userid"];
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+	die("Could not fetch account interests.");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +50,11 @@
 
 <div class="container">
   <div class="row">
-  <input type="text" name="txtFirstName" placeholder="Name" class="form-control">
+  <input type="text" name="txtFirstName" value="<?php echo $row[0]; ?>" placeholder="Name" class="form-control">
     <div>
       <div class="form-group">
-        <textarea class="form-control" rows="5" id="bio" placeholder="Biography"></textarea>
+        <textarea class="form-control" rows="5" id="bio" placeholder="Biography">
+		<?php echo $row[0]; ?></textarea>
       </div>
       <button id="addInterest" class="btn btnEdit">Edit Profile</button>
     </div>

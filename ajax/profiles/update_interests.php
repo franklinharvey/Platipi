@@ -1,12 +1,6 @@
 <?php
 
-$server_name =  "localhost";
-$server_username = "platypus";
-$server_password = "password";
-$db_name = "platipi";
-
 $interests = $_POST["interests"];
-
 
 // escape unsecured input
 $escaped_first_name = mysqli_real_escape_string($conn, $first_name);
@@ -21,7 +15,7 @@ if (!$result) {
 // insert all interests
 for ($i = 0; $i < count($interests); $i++) {
 	// escape unsecure interest
-	$escaped_interest = mysqli_real_escape_string($interests[$i]);
+	$escaped_interest = mysqli_real_escape_string($conn, $interests[$i]);
 	
 	$sql = "INSERT INTO interests (userid,interest) VALUES(".$_SESSION["userid"].", '".$escaped_interest."')";
 	$result = mysqli_query($conn, $sql);
