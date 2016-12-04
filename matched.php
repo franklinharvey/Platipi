@@ -32,7 +32,7 @@
 	$(document).ready(function() {
 		$.post("get_user_link.php","",function(response) {
 			document.getElementById("btnLink").onclick = function() {
-				location.href=response;
+				window.open(response);
 			}});
 	});
 </script>
