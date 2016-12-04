@@ -74,7 +74,7 @@ if (mysqli_num_rows($result) == 0) {
 <script>
 $(document).ready(function(){
 		$.post("queue_stop.php","", function(response){});
-		document.getElementById("logOut").onClick = function(){
+		document.getElementById("logOut").onclick = function(){
 			$.post("queue_stop.php","", function(response){});
 			$.post("LogOut.php","",function(response){location.href = "index.php";
 			});
