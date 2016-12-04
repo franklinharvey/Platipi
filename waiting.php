@@ -13,11 +13,11 @@
   <div class="container">
     <div class="row">
     <h1>Finding you a group</h1>
-    <h2>So you won't have to be <mark>alone!</mark></h2>
+    <h2>So you won't have to be <mark>alone!</mark><span class="blinking-cursor">|</span></h2>
   </div>
   <div class="loading">
     <!-- <img src="../graphics/box.gif" class="img-responsive"> -->
-    <button id="btnStop" class="btn btnStop">Stop Looking</button>
+    <a href="profile.php"><button id="btnStop" class="btn btnStop">Stop Looking</button></a>
   </div>
   </div>
   
