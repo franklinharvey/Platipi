@@ -25,7 +25,7 @@
 
 <script>
 	document.getElementById("btnLeave").onclick = function(){
-		$.post("queue.php", "{'action': 'stop'}", function(response) {
+		$.post("queue_stop.php", "", function(response) {
 			location.href = "profile.php";
 		});
 	}
