@@ -31,22 +31,25 @@ if (isset($_SESSION["userid"])) {
 				<input class="form-control col-sm-12" type="email" name="email" id="txtEmail" placeholder="Email">
 				<input class="form-control col-sm-12" type="password" name="password" id="txtPassword" placeholder="Password">
 				<p class="error" id="error"></p>
+				
+				
+				<div class="row omb_row-sm-offset-3">
+					<div class="col-xs-12 col-sm-3">
+						<label class="checkbox">
+							<input type="checkbox" value="remember-me" style: "padding-left: 20px; color: black">Remember Me
+						</label>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<p class="omb_forgotPwd">
+							<a href="#">Forgot password?</a>
+						</p>
+					</div>
+				</div>
+				
 				<button id="btnLogin" class="btn btnLogin">Log in</button>
 				<button id="btnSignUp" class="btn btnSignUp">Sign Up</button>
-				
-			<div class="row omb_row-sm-offset-3">
-				<div class="col-xs-12 col-sm-3">
-					<label class="checkbox">
-						<input type="checkbox" value="remember-me">Remember Me
-					</label>
-				</div>
-			<div class="col-xs-12 col-sm-3">
-				<p class="omb_forgotPwd">
-					<a href="#">Forgot password?</a>
-				</p>
-			</div>
+			
 		</div>
-			</div>
 		</form>
 	</div>
 			
